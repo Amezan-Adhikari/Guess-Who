@@ -50,7 +50,7 @@ export default function useSocket() {
     let socketInstance: Socket<ServerToClientEvents, ClientToServerEvents> | null = null;
     
     try {
-      const socketUrl = process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:3001';
+      const socketUrl = process.env.NEXT_PUBLIC_SOCKET_URL || "https://guesswhomultiplayer.netlify.app";
       socketInstance = io(socketUrl, {
         // Add these options to fix issues
         transports: ['polling', 'websocket'],
